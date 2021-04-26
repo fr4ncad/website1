@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "{% static 'img/img.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Archive</title>
+</head>
+<body>
+    <header>Archive</header>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            <div class="box">
+                <label for="nev">Name: </label>
+                <input type="text" name="name">
+            </div>                
+            <div class="box">
+                <label for="jelszo">Password: </label>
+                <input type="password" name="password">
+            </div>
+        </div>
+        <div>
+            <button type="submit">Enter</button>
+        </div>
+    </form>
+</body>
+</html>
